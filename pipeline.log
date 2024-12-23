@@ -1,0 +1,18 @@
+Starting pipeline...
+2024-12-23 07:51:16,733 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-12-23 07:51:17,244 - INFO - Downloaded web_traffic.csv to data/web_traffic.csv
+2024-12-23 07:51:17,954 - INFO - Loading data from data/web_traffic.csv
+2024-12-23 07:51:17,964 - INFO - Training Prophet model
+2024-12-23 07:51:18,005 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2024-12-23 07:51:18,015 - DEBUG - input tempfile: /var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpjzi_tl7i/nh4nzaim.json
+2024-12-23 07:51:18,069 - DEBUG - input tempfile: /var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpjzi_tl7i/gylf8sng.json
+2024-12-23 07:51:18,070 - DEBUG - idx 0
+2024-12-23 07:51:18,070 - DEBUG - running CmdStan, num_threads: None
+2024-12-23 07:51:18,070 - DEBUG - CmdStan args: ['/Users/lionelamuzu/Desktop/web-traffic-forecasting/venv/lib/python3.9/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=39819', 'data', 'file=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpjzi_tl7i/nh4nzaim.json', 'init=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpjzi_tl7i/gylf8sng.json', 'output', 'file=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpjzi_tl7i/prophet_modelc6kyh9y0/prophet_model-20241223075118.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2024-12-23 07:51:18,070 - INFO - Chain [1] start processing
+2024-12-23 07:51:18,154 - INFO - Chain [1] done processing
+2024-12-23 07:51:18,158 - INFO - Generating forecast for the next 30 days
+2024-12-23 07:51:18,376 - INFO - Forecast results saved to data/forecast_results.csv
+2024-12-23 07:51:18,558 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-12-23 07:51:19,483 - INFO - Uploaded data/forecast_results.csv to s3://web-traffic-data-bucket/forecast_results.csv
+Pipeline completed successfully!
