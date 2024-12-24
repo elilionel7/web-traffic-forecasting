@@ -16,3 +16,25 @@ Starting pipeline...
 2024-12-23 07:51:18,558 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
 2024-12-23 07:51:19,483 - INFO - Uploaded data/forecast_results.csv to s3://web-traffic-data-bucket/forecast_results.csv
 Pipeline completed successfully!
+Starting pipeline...
+2024-12-24 10:30:36,946 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-12-24 10:30:37,509 - INFO - Downloaded web_traffic.csv to data/web_traffic.csv
+2024-12-24 10:30:38,029 - INFO - Loading raw data from data/web_traffic.csv
+2024-12-24 10:30:38,034 - INFO - Converting 'Timestamp' column to datetime
+2024-12-24 10:30:38,038 - INFO - Checking and filling missing values
+2024-12-24 10:30:38,050 - INFO - Preprocessed data saved to data/preprocessed_web_traffic.csv
+2024-12-24 10:30:38,578 - INFO - Loading data from data/web_traffic.csv
+2024-12-24 10:30:38,582 - INFO - Training Prophet model
+2024-12-24 10:30:38,628 - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2024-12-24 10:30:38,639 - DEBUG - input tempfile: /var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpb2c0j9lw/eump3067.json
+2024-12-24 10:30:38,694 - DEBUG - input tempfile: /var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpb2c0j9lw/re016o_7.json
+2024-12-24 10:30:38,695 - DEBUG - idx 0
+2024-12-24 10:30:38,695 - DEBUG - running CmdStan, num_threads: None
+2024-12-24 10:30:38,695 - DEBUG - CmdStan args: ['/Users/lionelamuzu/Desktop/web-traffic-forecasting/venv/lib/python3.9/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=45113', 'data', 'file=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpb2c0j9lw/eump3067.json', 'init=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpb2c0j9lw/re016o_7.json', 'output', 'file=/var/folders/wq/ygvx9g1x64b12cjbjyp4_3z80000gn/T/tmpb2c0j9lw/prophet_modelbul2attj/prophet_model-20241224103038.csv', 'method=optimize', 'algorithm=lbfgs', 'iter=10000']
+2024-12-24 10:30:38,695 - INFO - Chain [1] start processing
+2024-12-24 10:30:38,773 - INFO - Chain [1] done processing
+2024-12-24 10:30:38,777 - INFO - Generating forecast for the next 30 days
+2024-12-24 10:30:39,004 - INFO - Forecast results saved to data/forecast_results.csv
+2024-12-24 10:30:39,194 - INFO - Found credentials in shared credentials file: ~/.aws/credentials
+2024-12-24 10:30:40,107 - INFO - Uploaded data/forecast_results.csv to s3://web-traffic-data-bucket/forecast_results.csv
+Pipeline completed successfully!
