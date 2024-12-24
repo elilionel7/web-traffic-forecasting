@@ -34,8 +34,8 @@ def preprocess_data(input_file, output_file):
         # Check for missing values and fill them
         logger.info("Checking and filling missing values")
         data = data.set_index('Timestamp')
-        data = data.resample('H').mean()  # Resample to hourly intervals
-        data = data.fillna(method='ffill')  # Fill forward missing values
+        data = data.resample('h').mean()  # Resample to hourly intervals
+        data = data.ffill()  # Fill forward missing values
 
         # Save the preprocessed data
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
