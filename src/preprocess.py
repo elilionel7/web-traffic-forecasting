@@ -47,4 +47,4 @@ def preprocess_data(input_file, output_file):
 
 # Example usage
 if __name__ == "__main__":
-    preprocess_data("../data/web_traffic.csv", "data/preprocessed_web_traffic.csv")
+    preprocess_data("data/web_traffic.csv", "data/preprocessed_web_traffic.csv")
